@@ -31,4 +31,13 @@ function AddMovie() {
   )
 }
 
+//to root saga
+//to saga
+//to server.js
+//to router
+// query
+//saga
+// to reducer
+//back here
+
 export default AddMovie;
