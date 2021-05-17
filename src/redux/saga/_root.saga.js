@@ -7,7 +7,7 @@ import fetchAllGenres from './fetchAllGenres.saga';
 function* rootSaga() {
   yield takeEvery('FETCH_MOVIES', fetchAllMovies);
   yield takeEvery('FETCH_DETAILS', getDetails);
-  yield takeEvery('FETCH_GENRES', getAllGenres);
+  yield takeEvery('FETCH_GENRES', fetchAllGenres);
 }
 
 export default rootSaga;

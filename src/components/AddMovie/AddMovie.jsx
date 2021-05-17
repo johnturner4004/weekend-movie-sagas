@@ -1,6 +1,16 @@
-import {useState} from 'react'
+import {useState} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
+
 
 function AddMovie() {
+
+  const dispatch = useDispatch();
+
+  function getGenres() {
+    dispatch({type: 'FETCH_GENRES'});
+  }
+
+  const genres = useSelector(store => store.genres);
 
   const [title, setTitle] = useState('');
   const [url, setUrl] = useState('');
@@ -21,9 +31,9 @@ function AddMovie() {
     <select required>
       <optgroup>
         <option disable selected value> -- Select a Genre -- </option>
-        {/* {
-        <option>test1</option>
-        } */}
+        {genres.map ((genre, i) => {
+        <option key={i}>{genre}</option>
+        })}
       </optgroup>
     </select><br />
     <button onClick={() => handleClick()}>Add Movie!</button>
@@ -37,7 +47,7 @@ function AddMovie() {
 //XXXto router
 //XXXquery
 //XXXsaga
-// to reducer
+//XXto reducer
 //back here
 
 export default AddMovie;
