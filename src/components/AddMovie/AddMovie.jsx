@@ -31,8 +31,8 @@ function AddMovie() {
   )
 }
 
-//to root saga
-//to saga
+//XXXto root saga
+//XXXto saga
 //to server.js
 //to router
 // query
