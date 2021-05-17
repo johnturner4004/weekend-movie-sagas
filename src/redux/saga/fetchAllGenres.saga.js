@@ -11,3 +11,5 @@ function fetchAllGenres() {
     console.log('get all genres error');
   }
 }
+
+export default fetchAllGenres;
