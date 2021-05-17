@@ -13,7 +13,7 @@
   [x] - dispatch to saga
   [x] - Post request with db query
   [x] - store data in redux
-  [ ] - shows all details **including ALL genres** for the selected movie. 
+  [x] - shows all details **including ALL genres** for the selected movie. 
     > Hint : You can make a GET request for a specific movie. Remember `req.params` and `:id`?
   [ ] - Research cards for your movie posters on the list page
     [ ] - data to card
@@ -21,7 +21,7 @@
 
 [ ] - add movie page
   [ ] - input fields
-    [ ] - title
+    [x] - title
     [ ] - poster image URL (images folder)
       [ ] - poster preview
     [ ] - textarea for description
