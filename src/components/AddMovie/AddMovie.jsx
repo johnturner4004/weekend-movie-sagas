@@ -33,10 +33,10 @@ function AddMovie() {
 
 //XXXto root saga
 //XXXto saga
-//to server.js
-//to router
-// query
-//saga
+//XXXto server.js
+//XXXto router
+//XXXquery
+//XXXsaga
 // to reducer
 //back here
 
