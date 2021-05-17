@@ -28,6 +28,22 @@ function Details() {
     <>
       <h1>{currentMovie.title}</h1>
       <img src={currentMovie.poster} />
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Genres:
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {currentMovie.genre.map((genre, i) => {
+            return(
+              <tr><td key={i}></td>{genre}</tr>
+            )
+          })}
+        </tbody>
+      </table>
       <p>{currentMovie.description}</p>
       <button onClick={() => backToHome()}>Back to home</button>
       </>

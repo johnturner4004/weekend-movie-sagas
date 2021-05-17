@@ -4,17 +4,15 @@ const pool = require('../modules/pool');
 
 router.post('/', (req, res) => {
   const id = req.body.id;
-  console.log('************************************************************************************************************************************************************************************************');
   
-  console.log('req.body:', req.body);
-  
-  const queryString = `SELECT * FROM movies WHERE id=${id}`;
-  console.log(queryString);
-  
+  const queryString = `SELECT m.*, ARRAY_AGG(g.name) AS genre FROM movies AS m
+  JOIN movies_genres AS mg ON m.id = mg.movie_id
+  JOIN genres AS g ON mg.genre_id = g.id
+  WHERE m.id=${id}
+  GROUP BY m.id;`;
+
   pool.query(queryString)
     .then(result => {
-      console.log(result);
-      
       res.send(result.rows);
     })
     .catch(error => {
