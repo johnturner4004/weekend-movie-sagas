@@ -8,10 +8,12 @@ function MovieList() {
   const history = useHistory();
   const movies = useSelector(store => store.movies);
 
+  // runs fetchAllMovies on page load
   useEffect(() => {
     dispatch({ type: "FETCH_MOVIES" });
   }, []);
 
+  // sends user to details page for selected movie. movie id sent through parameters
   const handleClick = (id) => {
     console.log("click", id);
     history.push(`/details/${id}`);
