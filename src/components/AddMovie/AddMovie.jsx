@@ -22,6 +22,13 @@ function AddMovie() {
   const [details, setDetails] = useState('');
   const [genre, setGenre] = useState('');
 
+  function clearInput() {
+    setTitle('');
+    setUrl('');
+    setDetails('');
+    setGenre('');
+  }
+
   function handleClick() {
     let newMovie = {
       title: title,
@@ -29,10 +36,16 @@ function AddMovie() {
       description: details,
       genre_id: Number(genre)
     }
+    clearInput();
     dispatch({ type: 'NEW_MOVIE', payload: newMovie});
     history.push('/');
     console.log('click');
   };
+
+  function handleCancel() {
+    clearInput();
+    history.push('/');
+  }
 
   return(
     <>
@@ -47,6 +60,7 @@ function AddMovie() {
         )}
     </select><br />
     <button onClick={() => handleClick()}>Add Movie!</button>
+    <button onClick={() => handleCancel()}>Cancel</button>
     </>
   )
 }
