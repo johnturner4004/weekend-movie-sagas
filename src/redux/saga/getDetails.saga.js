@@ -3,7 +3,6 @@ import { put } from 'redux-saga/effects';
 
 function* getDetails( action ) {
   //post id to be used to get details from DB
-  console.log(`********************************`, action,`********************************`);
   try {
     
     const response = yield axios.post('/api/details', action.payload)

@@ -1,4 +1,4 @@
-// Used to store movies returned from the server
+// Used to store the list of movies returned from the server
 const movies = (state = [], action) => {
   switch (action.type) {
       case 'SET_MOVIES':
