@@ -1,10 +1,12 @@
 import {useState, useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 
 function AddMovie() {
 
   const dispatch = useDispatch();
+  const history = useHistory()
 
   function getGenres() {
     dispatch({type: 'FETCH_GENRES'});
@@ -24,9 +26,11 @@ function AddMovie() {
     let newMovie = {
       title: title,
       poster: url,
-      details: details,
-      genre: genre
+      description: details,
+      genre_id: Number(genre)
     }
+    dispatch({ type: 'NEW_MOVIE', payload: newMovie});
+    history.push('/');
     console.log('click');
   };
 
@@ -39,7 +43,7 @@ function AddMovie() {
     <select onChange={(event) => setGenre(event.target.value)} required>
         <option disable selected value> -- Select a Genre -- </option>
         {genres.map ((genre) => 
-        <option key={genre.id}>{genre.name}</option>
+        <option key={genre.id} value={genre.id}>{genre.name}</option>
         )}
     </select><br />
     <button onClick={() => handleClick()}>Add Movie!</button>
