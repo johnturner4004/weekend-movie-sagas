@@ -1,0 +1,21 @@
+.detailsPage {
+  display: flex;
+  width: 100vw;
+  position: absolute;
+  height: 80vh;
+  flex-wrap: wrap;
+}
+
+.detailsPage button {
+  width: 100px;
+  height: 20px;
+}
+
+p {
+  width: 70vw;
+}
+
+br {
+  flex-basis: 100vw;
+}
+
