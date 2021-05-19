@@ -5,21 +5,22 @@ import { useEffect } from 'react';
 
 function Details() {
 
+  // gets movie id from parameters
   const { id } = useParams();
 
   const dispatch = useDispatch();
+  const history = useHistory();
 
+  // uses getDetails saga and id from params to get all the details for the selected book
   useEffect(() => {
   dispatch({ type:'FETCH_DETAILS', payload: {id: id} })
 }, []);
-  const currentMovie = useSelector(store => store.details[0]);
-  
-  const history = useHistory();
-  
-  console.log(currentMovie);
 
+  // gets movie details from store
+  const currentMovie = useSelector(store => store.details[0]);
+
+  //navigates user back to '/'s 
   const backToHome = () => {
-    console.log('click');
     history.push('/');
   }
 
