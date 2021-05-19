@@ -28,7 +28,7 @@ function Details() {
     currentMovie ?
     <>
       <h1>{currentMovie.title}</h1>
-      <img src={currentMovie.poster} />
+      <img className="poster" src={currentMovie.poster} />
       <table>
         <thead>
           <tr>

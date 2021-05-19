@@ -2,3 +2,15 @@
     display : flex;
     flex-wrap: wrap;
 }
+
+.poster {
+  max-height: 500px;
+  max-width:250px;
+}
+
+.movieFrame {
+  border: 5px solid black;
+  width: 250px;
+  margin: 10px;
+  background-color: papayawhip;
+}
