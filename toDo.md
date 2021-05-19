@@ -4,7 +4,7 @@
 [x] - install; run client and server
 
 [ ] - Home/List page
-  [ ] - Research grids for your movie posters on the Movie List page
+  [ ] - [Stretch]Research grids for your movie posters on the Movie List page
   [x] - when a poster is clicked -> /details view for that movie
   [x] - way to nav to add movie page
   [ ] - Invest some time in styling it up!
