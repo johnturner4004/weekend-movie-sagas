@@ -19,7 +19,7 @@
     [ ] - data to card
   [x] - details page should have a `Back to List` button to get back to the Home page
 
-[ ] - add movie page
+[x] - add movie page
   [x] - input fields
     [x] - title
     [x] - poster image URL (images folder)
@@ -33,5 +33,5 @@
       [x] - movie table
       [x] - movies_genres table
 
-[ ] Comment your code.
-[ ] Update this README to include a description of the project in your own words.
+[x] Comment your code.
+[x] Update this README to include a description of the project in your own words.
